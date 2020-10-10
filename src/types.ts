@@ -1,9 +1,9 @@
-export type Root = (ContainerNode | TerminalNode)[];
+export type Root = (ContainerNode | TerminalNode);
 
 interface ContainerNode {
   type: "container";
   split: "horizontal" | "vertical" | "tab";
-  children: Root;
+  children: Root[];
 }
 
 interface TerminalNode {

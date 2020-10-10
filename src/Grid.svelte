@@ -14,11 +14,11 @@
 </style>
 
 <div class="container">
-  {#each root as child}
-    {#if child.type === 'container'}
-      <svelte:self root={child.children} />
-    {:else}
-      <Cell {...child} />
-    {/if}
-  {/each}
+  {#if root.type === 'container'}
+    {#each root.children as child}
+      <svelte:self root={child} />
+    {/each}
+  {:else}
+    <Cell />
+  {/if}
 </div>
