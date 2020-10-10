@@ -50,8 +50,6 @@
       ],
     },
   ];
-
-  $: console.log(root);
 </script>
 
 <style>
