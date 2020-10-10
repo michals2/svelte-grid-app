@@ -2,7 +2,7 @@
   import Grid from "./Grid.svelte";
   import * as Types from "./types";
 
-  let root: Types.Root = {
+  let root: Types.ContainerNode = {
     type: "container",
     split: "horizontal",
     children: [
@@ -51,8 +51,12 @@
 </script>
 
 <style>
+  .app {
+    height: 600px;
+    width: 600px;
+  }
 </style>
 
-<div>hello</div>
-
-<Grid {root} />
+<div class="app">
+  <Grid {root} />
+</div>

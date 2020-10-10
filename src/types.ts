@@ -1,12 +1,10 @@
-export type Root = (ContainerNode | TerminalNode);
-
-interface ContainerNode {
+export interface ContainerNode {
   type: "container";
   split: "horizontal" | "vertical" | "tab";
-  children: Root[];
+  children: (ContainerNode | TerminalNode)[];
 }
 
-interface TerminalNode {
+export interface TerminalNode {
   type: "cell";
   name: string;
 }
