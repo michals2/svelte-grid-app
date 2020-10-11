@@ -1,7 +1,7 @@
 <script lang="ts">
-  import * as Types from "./types";
-  import Cell from "./Cell.svelte";
-  export let root: Types.ContainerNode;
+  import View from "./View.svelte";
+  import type { Container } from "./types";
+  export let root: Container;
 
   $: console.log(root);
 </script>
@@ -10,7 +10,6 @@
   .container {
     display: flex;
     border: 1px dashed white;
-    padding: 4px;
     align-items: stretch;
     justify-content: stretch;
     width: 100%;
@@ -37,5 +36,5 @@
     {/each}
   </div>
 {:else}
-  <Cell {...root} />
+  <View {...root} />
 {/if}

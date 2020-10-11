@@ -1,5 +1,6 @@
 <script lang="ts">
-  export let name: any;
+  import type { View } from "./types";
+  export let name: View;
 </script>
 
 <style>

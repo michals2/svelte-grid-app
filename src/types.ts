@@ -1,10 +1,10 @@
-export interface ContainerNode {
+export interface Container {
   type: "container";
   split: "horizontal" | "vertical" | "tab";
-  children: (ContainerNode | TerminalNode)[];
+  children: (Container | View)[];
 }
 
-export interface TerminalNode {
-  type: "cell";
+export interface View {
+  type: "view";
   name: string;
 }

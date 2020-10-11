@@ -1,8 +1,8 @@
 <script lang="ts">
-  import Grid from "./Grid.svelte";
-  import * as Types from "./types";
+  import ViewContainer from "./ViewContainer.svelte";
+  import type { Container } from "./types";
 
-  let root: Types.ContainerNode = {
+  let root: Container = {
     type: "container",
     split: "horizontal",
     children: [
@@ -11,11 +11,11 @@
         split: "tab",
         children: [
           {
-            type: "cell",
+            type: "view",
             name: "FileA.ts",
           },
           {
-            type: "cell",
+            type: "view",
             name: "FileB.ts",
           },
         ],
@@ -29,7 +29,7 @@
             split: "tab",
             children: [
               {
-                type: "cell",
+                type: "view",
                 name: "FileC.ts",
               },
             ],
@@ -39,7 +39,7 @@
             split: "tab",
             children: [
               {
-                type: "cell",
+                type: "view",
                 name: "FileD.ts",
               },
             ],
@@ -58,5 +58,5 @@
 </style>
 
 <div class="app">
-  <Grid {root} />
+  <ViewContainer {root} />
 </div>
